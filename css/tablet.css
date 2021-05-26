@@ -1,4 +1,13 @@
 @media (min-width: 768px) {
+    body {
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 10vh 84vh 6vh;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
     .header {
         grid-area: header;
         display: grid;
@@ -12,6 +21,21 @@
     }
     .img-header {
         width: 50px;
+    }
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(4, 25vw);
+        grid-template-rows: 6vh 20vh 6vh 20vh 6vh 20vh 6vh;
+        grid-template-areas: 
+        "main-title main-title main-title main-title"
+        "section-1 section-2 section-3 section-4"
+        "abisinio americano asiatico balines"
+        "section-5 section-6 section-7 section-8"
+        "bengali australiano birmano bombay"
+        "section-9 section-10 section-11 section-12"
+        "britanico burmes burmilla chinchilla";
+        background-color: white;
     }
     .main-title {
         font-size: 2.6rem;
