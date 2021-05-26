@@ -12,7 +12,7 @@ html {
 body {
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 10vh 84vh 6vh;
+    grid-template-rows: 10vh 162vh 6vh;
     grid-template-areas: 
     "header"
     "main"
@@ -30,7 +30,7 @@ body {
     grid-row: 1;
     justify-self: center;
     align-self: center;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     cursor: pointer;
 }
 .title-header:hover {
@@ -47,7 +47,7 @@ body {
     grid-area: main;
     display: grid;
     grid-template-columns: 50vw 50vw;
-    grid-template-rows: 6vh 20vh 6vh 20vh 6vh 20vh 6vh;
+    grid-template-rows: 6vh 20vh 6vh 20vh 6vh 20vh 6vh 20vh 6vh 20vh 6vh 20vh 6vh;
     grid-template-areas: 
     "main-title main-title"
     "section-1 section-2"
@@ -55,7 +55,13 @@ body {
     "section-3 section-4"
     "asiatico balines"
     "section-5 section-6"
-    "bengali australiano";
+    "bengali australiano"
+    "section-7 section-8"
+    "birmano bombay"
+    "section-9 section-10"
+    "britanico burmes"
+    "section-11 section-12"
+    "burmilla chinchilla";
     background-color: white;
 }
 .main-title {
@@ -63,7 +69,7 @@ body {
     justify-self: center;
     align-self: center;
     color: black;
-    font-size: 1.8rem;
+    font-size: 2rem;
 }
 .section-1 {
     grid-area: section-1;
@@ -107,6 +113,49 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
 }
+.section-7 {
+    grid-area: section-7;
+    background-image: url(/imgs/birmano.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-8 {
+    grid-area: section-8;
+    background-image: url(/imgs/bombay.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-9 {
+    grid-area: section-9;
+    background-image: url(/imgs/britanico.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-10 {
+    grid-area: section-10;
+    background-image: url(/imgs/burmes.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-11 {
+    grid-area: section-11;
+    background-image: url(/imgs/Burmilla.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-12 {
+    grid-area: section-12;
+    background-image: url(/imgs/chinchilla.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
 main a {
     text-decoration: none;
     text-align: center;
@@ -141,6 +190,30 @@ main a {
 }
 .australiano {
     grid-area: australiano;
+    place-self: center;
+}
+.birmano {
+    grid-area: birmano;
+    place-self: center;
+}
+.bombay {
+    grid-area: bombay;
+    place-self: center;
+}
+.britanico {
+    grid-area: britanico;
+    place-self: center;
+}
+.burmes {
+    grid-area: burmes;
+    place-self: center;
+}
+.burmilla {
+    grid-area: burmilla;
+    place-self: center;
+}
+.chinchilla {
+    grid-area: chinchilla;
     place-self: center;
 }
 .footer {
