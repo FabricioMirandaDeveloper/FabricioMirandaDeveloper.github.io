@@ -1,0 +1,19 @@
+@media (min-width: 768px) {
+    .header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 8vw 24vw 1fr;
+        grid-template-rows: 10vh;
+        background-color: #b5e48c;
+    }
+    .title-header {
+        font-size: 3.4rem;
+        justify-self: start;
+    }
+    .img-header {
+        width: 50px;
+    }
+    .main-title {
+        font-size: 2.6rem;
+    }
+}
