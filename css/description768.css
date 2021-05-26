@@ -6,7 +6,7 @@
         grid-template-rows: 10vh;
         background-color: #b5e48c;
     }
-    .title-header {
+    .titledelheader {
         font-size: 3rem;
         justify-self: start;
         padding: 0.5rem;
@@ -32,7 +32,7 @@
         grid-template-columns: 15vw 30vw 15vw 35vw 5vw;
         grid-template-rows: 15vh 75vh;
         grid-template-areas: 
-        "regreso titulo titulo adoptar adoptar"
+        "regreso titulo titulo adoptar ."
         "imagen imagen descripcion descripcion .";
     }
 }
