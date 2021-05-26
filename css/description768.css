@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+    .header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 7vw 23vw 1fr;
+        grid-template-rows: 10vh;
+        background-color: #b5e48c;
+    }
+    .title-header {
+        font-size: 3rem;
+        justify-self: start;
+        padding: 0.5rem;
+    }
+    .regreso-main {
+        width: 4.5rem;
+    }
+    .titulo-main {
+        font-size: 2.4rem;
+    }
+    .adoptar {
+        font-size: 1.6rem;
+    }
+    .descripcion-main {
+        font-size: 1.8rem;
+        border-radius: 1rem;
+        align-self: center;
+        place-self: center;
+    }
+    .main {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: 15vw 30vw 15vw 35vw 5vw;
+        grid-template-rows: 15vh 75vh;
+        grid-template-areas: 
+        "regreso titulo titulo adoptar adoptar"
+        "imagen imagen descripcion descripcion .";
+    }
+}
