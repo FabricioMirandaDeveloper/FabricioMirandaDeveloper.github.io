@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Architects Daughter', cursive;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 10vh 84vh 6vh;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 20vw 40vw 1fr;
+    grid-template-rows: 10vh;
+    background-color: #b5e48c;
+}
+.title-header {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    font-size: 2.2rem;
+    cursor: pointer;
+}
+.title-header:hover {
+    color: darkblue;
+}
+.img-header {
+    width: 40px;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    justify-self: end;
+    align-self: center;
+}
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 6vh 20vh 6vh 20vh 6vh 20vh 6vh;
+    grid-template-areas: 
+    "main-title main-title"
+    "section-1 section-2"
+    "abisinio americano"
+    "section-3 section-4"
+    "asiatico balines"
+    "section-5 section-6"
+    "bengali australiano";
+    background-color: white;
+}
+.main-title {
+    grid-area: main-title;
+    justify-self: center;
+    align-self: center;
+    color: black;
+    font-size: 1.8rem;
+}
+.section-1 {
+    grid-area: section-1;
+    background-image: url(/imgs/abisinio.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-2 {
+    grid-area: section-2;
+    background-image: url(/imgs/americano.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-3 {
+    grid-area: section-3;
+    background-image: url(/imgs/asiatico.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-4 {
+    grid-area: section-4;
+    background-image: url(/imgs/balines.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-5 {
+    grid-area: section-5;
+    background-image: url(/imgs/bengali.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.section-6 {
+    grid-area: section-6;
+    background-image: url(/imgs/mistAustraliano.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+main a {
+    text-decoration: none;
+    text-align: center;
+    background-color: #d9ed92;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    color: black;
+    font-weight: bolder;
+    font-size: 1.6rem;
+}
+.abisinio {
+    grid-area: abisinio;
+    align-self: center;
+    place-self: center;
+}
+.americano {
+    grid-area: americano;
+    place-self: center;
+}
+.asiatico {
+    grid-area: asiatico;
+    place-self: center;
+}
+.balines {
+    grid-area: balines;
+    place-self: center;
+
+}
+.bengali {
+    grid-area: bengali;
+    place-self: center;
+}
+.australiano {
+    grid-area: australiano;
+    place-self: center;
+}
+.footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 6vh;
+    background: #b5e48c;
+}
+footer h3 {
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 1.6rem;
+    align-self: center;
+    justify-self: center;
+}
+
