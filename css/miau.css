@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Architects Daughter', cursive;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    display: grid;
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-rows: 10vh 5vh 80vh 5vh;
+    grid-template-areas: 
+    "header header header"
+    ". . ."
+    ". formulario ."
+    ". . .";
+}
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 20vw 45vw 1fr;
+    grid-template-rows: 10vh;
+    background-color: #b5e48c;
+}
+.title-header {
+    grid-column: 3 / 4;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+.titulodelheader {
+    font-size: 2.4rem;
+    color: black;
+}
+.title-header:hover {
+    color: darkblue;
+}
+.img-header {
+    width: 40px;
+    grid-column: 2 / 3;
+    grid-row: 1;
+    justify-self: end;
+    align-self: center;
+}
+main {
+    grid-area: formulario;
+    background-color: rgb(34, 79, 23);
+    display: grid;
+    grid-template-columns: 30vw 50vw;
+    grid-template-rows: repeat(8,10vh);
+    grid-template-areas: 
+    "titulo titulo"
+    "elgif elgif"
+    "elgif elgif"
+    "elgif elgif"
+    "nombre inpunombre"
+    "edad inpuedad"
+    "celular inpucelular"
+    "botoncito botoncito";
+    background-color: #b5e48c;
+    border: black 1px solid;
+    border-radius: 1rem;
+}
+.titulo-main {
+    grid-area: titulo;
+    place-self: center;
+    font-size: 1.6rem;
+}
+.imagen-main {
+    grid-area: elgif;
+    background-image: url("/imgs/gatito.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.nombrecito {
+    grid-area: nombre;
+    place-self: center end;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.edadcita {
+    grid-area: edad;
+    place-self: center end;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.celularcito {
+    grid-area: celular;
+    place-self: center end;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.input-nombre {
+    grid-area: inpunombre;
+    place-self: center;
+}
+.input-edad {
+    grid-area: inpuedad;
+    place-self: center;
+}
+.input-celular {
+    grid-area: inpucelular;
+    place-self: center;
+}
+.elboton {
+    grid-area: botoncito;
+    place-self: center;
+    border: solid 1px rgb(189, 114, 114);
+    padding: 0.8rem;
+    border-radius: 1rem;
+    font-weight: bolder;
+    font-size: 1.4rem;
+    background-color: rgb(189, 114, 114);
+}
+main input {
+    width: 90%;
+    height: 50%;
+}
