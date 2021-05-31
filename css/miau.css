@@ -14,7 +14,7 @@ body {
     grid-template-areas: 
     "header header header"
     ". . ."
-    ". formulario ."
+    "elgato formulario ."
     ". . .";
 }
 .header {
@@ -46,7 +46,7 @@ body {
     justify-self: end;
     align-self: center;
 }
-main {
+form {
     grid-area: formulario;
     background-color: rgb(34, 79, 23);
     display: grid;
@@ -69,6 +69,9 @@ main {
     grid-area: titulo;
     place-self: center;
     font-size: 1.6rem;
+}
+.fondodegato {
+    grid-area: elgato;
 }
 .imagen-main {
     grid-area: elgif;
@@ -98,26 +101,34 @@ main {
 .input-nombre {
     grid-area: inpunombre;
     place-self: center;
+    width: 90%;
+    height: 50%;
 }
 .input-edad {
     grid-area: inpuedad;
     place-self: center;
+    width: 90%;
+    height: 50%;
 }
 .input-celular {
     grid-area: inpucelular;
     place-self: center;
+    width: 90%;
+    height: 50%;
 }
 .elboton {
     grid-area: botoncito;
     place-self: center;
     border: solid 1px rgb(189, 114, 114);
     padding: 0.8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     border-radius: 1rem;
     font-weight: bolder;
     font-size: 1.4rem;
     background-color: rgb(189, 114, 114);
 }
-main input {
-    width: 90%;
-    height: 50%;
+.elboton:hover {
+    background-color: steelblue;
+    border: steelblue;
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/miau.css">
     <link rel="stylesheet" href="/css/animaciones.css">
+    <link rel="stylesheet" href="/css/miaudel700.css">
     <title>ADOPCION</title>
 </head>
 <body>
@@ -13,7 +14,8 @@
         <img class="img-header" src="/imgs/feliz.svg" alt="icono de gatito feliz">   
         <a class="title-header" href="/index.html"><h1 class="titulodelheader">Adopt Cats</h1></a>
     </header>
-    <main>
+    <div class="fondodegato"></div>
+    <form action="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=5WDHK6FW5FVNS" method="POST"> 
         <h2 class="titulo-main">ADOPCION DE MICHIS</h2>
         <div class="imagen-main"></div>
         <label class="nombrecito" for="nombre">NOMBRE: </label>
@@ -22,7 +24,8 @@
         <input class="input-nombre" type="text" id="nombre">
         <input class="input-edad" type="number" id="numero">
         <input class="input-celular" type="number" id="celular">
-        <button class="elboton">DAME MI GATITO</button>
+        <input class="elboton" type="submit" name="submit"></input>
+    </form>        
     </main>
 </body>
 </html>

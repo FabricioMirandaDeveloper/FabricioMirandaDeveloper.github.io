@@ -1,0 +1,45 @@
+@media (min-width: 700px) {
+    body {
+        display: grid;
+        grid-template-columns: 10vw 40vw 40vw 10vw;
+        grid-template-rows: 10vh 5vh 80vh 5vh;
+        grid-template-areas: 
+        "header header header header"
+        ". . . ."
+        ". elgato formulario ."
+        ". . . ."; 
+    }
+    .header {
+        grid-area: header;
+        display: grid;
+        grid-template-columns: 1fr 10vw 25vw 1fr;
+        grid-template-rows: 10vh;
+        background-color: #b5e48c;
+    }
+    form {
+        grid-area: formulario;
+        background-color: rgb(34, 79, 23);
+        display: grid;
+        grid-template-columns: 12vw 28vw;
+        grid-template-rows: repeat(8,10vh);
+        grid-template-areas: 
+        "titulo titulo"
+        "elgif elgif"
+        "elgif elgif"
+        "elgif elgif"
+        "nombre inpunombre"
+        "edad inpuedad"
+        "celular inpucelular"
+        "botoncito botoncito";
+        background-color: #b5e48c;
+        border: black 1px solid;
+        border-radius: 1rem;
+    }
+    .fondodegato {
+        background-image: url("/imgs/gatofondo.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 1rem;
+    }
+}
