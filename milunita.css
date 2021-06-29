@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: black;
+} 
+.titulo {
+    margin: 20px;
+}
+.tituloActualizacion {
+    margin-bottom: 10px;
+}
+.imagenuno {
+    width: 80vw;
+    height: 50vh;
+    border: white solid 1px;
+    background-image: url(/lunita/1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mensajedeamor {
+    margin: 30px;
+    text-align: center;
+}
+.imagendos {
+    width: 80vw;
+    height: 50vh;
+    background-image: url(/lunita/2.jpg);
+    background-position: start;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mensajedeamordos {
+    margin: 30px;
+}
