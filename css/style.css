@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+:root {
+    --cWhite: white;
+    --cBlack: black;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Architects Daughter', cursive;
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    display: grid;
+    grid-template-rows: 10vh 75vh 15vh;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+
+
+/* header */
+/* header */
+header {
+    grid-area: header;
+}
+
+
+
+
+/* main */
+/* main */
+main {
+    grid-area: main;
+    background-color: var(--cWhite);
+}
+
+
+
+
+/* footer */
+/* footer */
+footer {
+    grid-area: footer;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "projects home posts";
+    background-color: var(--cWhite);
+    border-top: 2px solid var(--cBlack);
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+    color: var(--cBlack);
+}
+.nav__projects {
+    grid-area: projects;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+.nav__home {
+    grid-area: home;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-right: 2px solid var(--cBlack);
+    border-left: 2px solid var(--cBlack);
+}
+.nav__posts {
+    grid-area: posts;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-color: var(--cWhite);
+}
+.nav--imgs {
+    width: 40px;
+    flex-grow: 2;
+}
+.nav--text {
+    flex-grow: 1;
+    font-size: 1.6rem; 
+}
