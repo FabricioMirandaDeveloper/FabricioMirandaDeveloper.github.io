@@ -75,7 +75,8 @@ summary {
     font-weight: bold;
 }
 hr {
-    border-color: var(--cBlack);
+    border-color: var(--cWhite);
+    background-color: var(--cWhite);
 }
 main {
     grid-area: main;
