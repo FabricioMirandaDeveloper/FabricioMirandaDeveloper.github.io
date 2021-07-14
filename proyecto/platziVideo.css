@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+
+:root {
+    --cWhite: white;
+    --cBlack: black;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    display: grid;
+    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-columns: 2vw 96vw 2vw;
+    grid-template-areas: 
+    ". header ."
+    ". main ."
+    ". footer .";
+    background: linear-gradient(to right, #2193b0, #6dd5ed);
+    font-family: 'Source Serif Pro', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* HEADER */
+/* HEADER */
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 36vw 60vw;
+    grid-template-areas: 
+    "logo menu";
+    position: relative;
+}
+.header__img {
+    grid-area: logo;
+    place-self: center;
+    width: 100px;
+}
+.header__menu {
+    grid-area: menu;
+    place-self: center end;
+    cursor: pointer;
+}
+.menu--img {
+    width: 25px;
+}
+details {
+    margin-right: 20px;
+}
+details[open] {
+    position: absolute;
+    top: 13px;
+    text-align: right;
+}
+summary {
+    list-style: none;
+}
+.menu--list {
+    background-color: #14a7cc;
+    border-radius: 5px;
+    padding: 5px;
+}
+.list--items {
+    color: var(--cWhite);
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+hr {
+    border-color: var(--cBlack);
+}
+main {
+    grid-area: main;
+}
