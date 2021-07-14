@@ -75,8 +75,8 @@ summary {
     font-weight: bold;
 }
 hr {
-    border-color: var(--cWhite);
-    background-color: var(--cWhite);
+    border-color: var(--cWhite);  /* Chrome y Safari */
+    background-color: var(--cWhite); /* Firefox y Opera */
 }
 main {
     grid-area: main;
