@@ -42,7 +42,7 @@ a {
 }
 .header__img {
     grid-area: logo;
-    place-self: center;
+    place-self: center start;
     width: 100px;
 }
 .header__menu {
@@ -78,6 +78,12 @@ hr {
     border-color: var(--cWhite);  /* Chrome y Safari */
     background-color: var(--cWhite); /* Firefox y Opera */
 }
+
+
+
+
+/* main */
+/* main */
 main {
     grid-area: main;
 }
