@@ -1,19 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
+@import url('globales.css');
 
-:root {
-    --cWhite: white;
-    --cBlack: black;
-}
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 
-html {
-    font-size: 62.5%;
-}
 body {
     display: grid;
     grid-template-rows: 10vh 75vh 15vh;
@@ -22,8 +9,6 @@ body {
     "main"
     "footer";
 }
-
-
 
 /* header */
 /* header */
@@ -39,8 +24,7 @@ header {
 main {
     grid-area: main;
     background-color: var(--cWhite);
-    font-family: 'Source Serif Pro', serif;
-    
+    font-family: var(--fsPrimary);
 }
 .main__me {
     display: grid;
@@ -86,7 +70,7 @@ footer {
     background-color: var(--cWhite);
     border-top: 2px solid var(--cBlack);
     cursor: pointer;
-    font-family: 'Architects Daughter', cursive;
+    font-family: var(--fsSecundary);
 }
 a {
     text-decoration: none;

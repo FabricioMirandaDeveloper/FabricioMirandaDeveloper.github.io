@@ -1,25 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@300&display=swap');
-
-:root {
-    --cWhite: white;
-    --cBlack: black;
-}
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-html {
-    font-size: 62.5%;
-}
+@import url('/css/globales.css');
 body {
     display: grid;
     grid-template-rows: 10vh 80vh 10vh;
     grid-template-columns: 2vw 96vw 2vw;
     grid-template-areas: 
     ". header ."
-    ". main ."
+    "main main main"
     ". footer .";
     background: linear-gradient(to right, #2193b0, #6dd5ed);
     font-family: 'Source Serif Pro', serif;
@@ -87,12 +73,12 @@ hr {
 main {
     grid-area: main;
     display: grid;
-    grid-template-rows: repeat(4,1fr);
+    grid-template-rows: repeat(4, 20vh);
     grid-template-areas: 
     "buscador"
-    "."
-    "."
-    ".";
+    "carousel"
+    "carousel"
+    "carousel";
 }
 .main__buscador {
     grid-area: buscador;
@@ -120,4 +106,83 @@ main {
 }
 .buscador--input::placeholder {
     color: white;
+}
+
+
+
+
+/* main carrusel */
+/* main carrusel */
+.carousel {
+    grid-area: carousel;
+    width: 100%;
+    overflow: scroll;
+    padding: 0px 30px;
+    position: relative;
+}
+.carousel__container {
+    white-space: nowrap;    
+    margin: 40px 0px;
+    padding-bottom: 10px;
+}
+.carousel--item {
+    background-color: palevioletred;
+    width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 450ms all ;
+    transform-origin: center left;
+    position: relative;
+}
+.carousel--item:hover ~ .carousel--item {
+    transform: translate3d(100px, 0, 0);
+}
+.carousel__container:hover .carousel--item {
+    opacity: 0.3;
+}   
+.carousel__container:hover .carousel--item:hover {
+    transform: scale(1.5);
+    opacity: 1;
+
+}
+.carousel--details {
+    font-size: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 150px;
+}
+.carousel--details img {
+    width: 40px;
+}
+.carousel--details2 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: start;
+    margin-left: 10px;
+}
+
+.carousel--text {
+    color: var(--cWhite);
+    font-size: 1.6rem;
+}
+.carousel--text2 {
+    color: var(--cWhite);
+    font-size: 1.2rem;
+}
+.item1 {
+    background: url("imgs/gato1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+.item1 {
+    background: url("imgs/gato1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
 }

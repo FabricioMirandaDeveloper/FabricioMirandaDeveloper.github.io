@@ -51,7 +51,7 @@ body {
 }
 .card--image {
     grid-area: image;
-    background-image: url(lunita/1.jpg);
+    background-image: url(1.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -109,7 +109,7 @@ body {
 .imagendos {
     width: 80vw;
     height: 50vh;
-    background-image: url(/lunita/2.jpg);
+    background-image: url(2.jpg);
     background-position: start;
     background-repeat: no-repeat;
     background-size: cover;
