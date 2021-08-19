@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+main {
+    background-image: url("imgs/i1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sombra {
+    background-color: rgba(0, 0, 0, 0.5);
+}   
+h1 {
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+h1::after {
+    content: " ❤";
+    color: red;
+}
+h4, p, h6 {
+    text-align: center;
+    padding: 10px;
+}
+.imagen {
+    padding: 5px;
+    background-color: black;
+}
+.fourloko {
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    border: 1px red solid;
+}
+
+.frases {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, 46vw) 1fr;
+    grid-template-rows: repeat(2, 70px);
+    gap: 5px;
+    grid-template-areas: 
+    ". uno dos ."
+    ". tres cuatro .";
+    background-color: black;
+   
+}
+.text1 {
+    grid-area: uno;
+    border: 1px red solid;
+    place-self: center;
+}
+.text2 {
+    grid-area: dos;
+    border: 1px red solid;
+    place-self: center;
+}
+.text3 {
+    grid-area: tres;
+    border: 1px red solid;
+    place-self: center;
+}
+.text4 {
+    grid-area: cuatro;
+    border: 1px red solid;
+    place-self: center;
+}
+
+
+
