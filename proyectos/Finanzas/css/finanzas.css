@@ -31,6 +31,19 @@ body {
 .content {
     max-width: 500px;
 }
+.step {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.step::after {
+    content: '';
+    border-right: 1px solid var(--primary);
+    height: 60px;
+    position: absolute;
+    top: 34px;
+    opacity: .4;
+}
 #hero {
     height: 900px;
 }
