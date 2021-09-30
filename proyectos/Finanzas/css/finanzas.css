@@ -32,6 +32,7 @@ body {
 .btn-light {
     background-color: var(--light);
     border-color:  var(--light);
+    color: var(--primary);
 }
 .bg-primary {
     background-color: var(--primary) !important;
@@ -61,6 +62,16 @@ body {
 .call-to-action img {
     max-width: 260px;
 }
+.cta-form {
+    max-width: 480px;
+}
+.cta-form .form-control {
+    min-height: 82px;
+}
+.cta-form .btn {
+    top: 12px;
+    right: 12px;
+}
 section {
     height: 900px;
 }
@@ -74,6 +85,10 @@ section {
     .call-to-action img{
         max-width: 100%;
     }
+    .w-75 {
+        width: 100% !important;
+    }
+    
 }
 .navbar-toggler:focus {
     box-shadow: none;
