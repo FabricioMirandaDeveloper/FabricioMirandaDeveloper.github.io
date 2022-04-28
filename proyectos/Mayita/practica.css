@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+.container {
+    background-color: #333;
+    height: 30vh;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+
+}
+.item {
+    border: medium solid #999 ;
+    background-color: #666;
+
+}
