@@ -4,6 +4,9 @@
     padding: 0;
     text-decoration: none;
 }
+body {
+    background: #144272;
+}
 .nav {
     background: #0A2647;
     height: 80px;
@@ -28,7 +31,6 @@
     --clyppy: polygon(0 0, 0 0, 0 100%, 0% 100%);
     
 }
-
 .nav__input {
     display: none;
 }
@@ -50,15 +52,16 @@
     background: #144272;
 }
 
-@media screen and (min-width: 1024px) {
-    .nav__label {
+@media screen and (min-width: 768px) {
+    .nav__label{
         display: none;
     }
     .nav__menu {
-        position: inherit;
-        display: flex;
+        position: static;
+        clip-path: none;
+        transition: none;
         flex-direction: row;
-        gap: 0rem;
+        width: 50%;
     }
     .nav__item::after{
         content: "";
