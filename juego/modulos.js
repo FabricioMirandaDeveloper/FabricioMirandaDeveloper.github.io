@@ -326,7 +326,7 @@ convertirGrados(10, "F") */
 
 /* 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800. */
 
-const aplicarDescuento = (monto = undefined, descuento = 0) => {
+/* const aplicarDescuento = (monto = undefined, descuento = 0) => {
     
     if(monto === undefined) return console.warn("No ingresaste un monto")
 
@@ -349,7 +349,66 @@ aplicarDescuento(-1)
 aplicarDescuento(100)
 aplicarDescuento(100, "10")
 aplicarDescuento(100,-5)
-aplicarDescuento(100,45)
+aplicarDescuento(100,45) */
 
 /* 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020). */
 
+/* const calcularAnios = (fecha = undefined) => {
+    if(fecha === undefined) return console.warn("No ingresaste la fecha")
+
+    if(!(fecha instanceof Date)) return console.error("El valor que ingresaste NO es una fecha válida")
+
+    let hoyMenosFecha = new Date().getTime() - fecha.getTime(),
+    aniosEnMs = 1000 * 60 * 60 * 24 * 365,
+    aniosHumanos = Math.floor(hoyMenosFecha / aniosEnMs)
+
+    return(Math.sign(aniosHumanos) === -1)
+        ? console.info(`Faltan ${Math.abs(aniosHumanos)} años para el ${fecha.getFullYear()}.`)
+        : (Math.sign(aniosHumanos) === 1)
+            ? console.info(`Han pasado ${aniosHumanos} años, desde ${fecha.getFullYear()}`)
+            : console.info(`Estamos en el año actual ${fecha.getFullYear()}`)
+}
+calcularAnios()
+calcularAnios("ay")
+calcularAnios({})
+calcularAnios(new Date())
+calcularAnios(new Date(2001,3,04))
+calcularAnios(new Date(2050,3,04)) */
+
+/* 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5. */
+
+const contador = (texto = "") => {
+
+    if(!texto) return console.warn("No ingresaste una cadena de texto.")
+
+    if(typeof texto !== "string") return console.error(`El valor ${texto} ingresado. NO es una cadena de texto.`)
+
+    let vocales = 0,
+    consonantes = 0
+
+    texto = texto.toLowerCase();
+
+    for (let letra of texto) {
+
+        if(/[aeiouáéíóú]/.test(letra)) vocales++
+
+        if(/[bcdfghjklmnñpqrstvwxyz]/.test(letra)) consonantes++
+    }
+
+    return console.info({
+        texto,
+        vocales,
+        consonantes
+    })
+}
+
+contador()
+contador(2)
+contador("Hola mundo")
+contador("Ñoño")
+contador("lorem")
+
+
+/* 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero. */
+
+/* 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero. */
