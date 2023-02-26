@@ -12,41 +12,25 @@
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body>
-  <nav class="nav">
-    <div class="nav__container">
-      <a href=""><img src="./assets/logo.png" alt="logo" class="nav__logo"></a>
-      <label for="icon-bars" class="nav__label">
-        <i class="fa-solid fa-bars nav__icon"></i>
-      </label>
-      <input type="checkbox" id="icon-bars" class="nav__input">
-      <div class="nav__menu">
-          <a href="#" class="nav__item">Inicio</a>
-          <a href="#" class="nav__item">Nosotros</a>
-          <a href="#" class="nav__item">Servicios</a>
-          <a href="/practica/practica.html" class="nav__item">Portafolio</a>
-          <a href="#" class="nav__item">Contactos</a>
-      </div>
-    </div>
-  </nav>
-  <article class="mt-4 bg-[#0A2647] h-20 text-white">
+<body> 
+  <nav class="bg-[#18122B] h-20 text-white relative">
     <div class="flex justify-between items-center h-full w-11/12 mx-auto">
       <a href="index.html">
         <img src="./assets/logo.png" alt="logo" class="h-10">
       </a>
-      <label for="icon-bars" class="nav__label">
+      <label for="prueba" class="nav__label">
         <i class="fa-solid fa-bars text-3xl sm:hidden"></i>
       </label>
-      <input type="checkbox" id="icon-bars" class="hidden">
-      <div class="hidden sm:flex sm:gap-x-4 md:gap-x-8 lg:gap-x-12 xl:gap-x-16">
+      <input type="checkbox" id="prueba" class="hidden">
+      <div class="absolute invisible bg-[#393053] top-0 left-0 w-full h-screen -z-10 flex flex-col items-center justify-evenly pt-20 sm:flex sm:gap-x-4 md:gap-x-8 lg:gap-x-12 xl:gap-x-16" id="prueba2">
           <a href="#" class="">Inicio</a>
           <a href="#" class="">Nosotros</a>
           <a href="#" class="">Servicios</a>
-          <a href="/practica/practica.html" class="nav__item">Portafolio</a>
-          <a href="#" class="">Contactos</a>
+          <a href="/practica/practica.html" class="">Portafolio</a>
+          <a href="#" class="">Contacto</a>
       </div>
     </div>
-  </article>
+  </nav>
 </body>
 
 </html>
