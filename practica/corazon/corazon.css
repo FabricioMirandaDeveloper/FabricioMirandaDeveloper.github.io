@@ -1,0 +1,68 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-color: rgb(13, 13, 53);
+
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    transform: rotate(45deg);
+    position: relative;
+    animation: latidos .4s linear infinite alternate;
+    box-shadow: 15px 15px 100px #f20044;
+}
+.heart::before,
+.heart::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    border-radius: 50%;
+}
+.heart::before {
+    right: 50%;
+    box-shadow: -15px 0px 100px #f20044;
+}
+.heart::after {
+    top: -50%;
+    box-shadow: 0px -15px 100px #f20044;
+}
+@keyframes latidos {
+    0%{
+        transform: rotate(45deg) scale(1.1);
+    }50%{
+        transform: rotate(45deg) scale(1);
+    }100%{
+        transform: rotate(45deg) scale(.9);
+    }
+}
+@keyframes latidos2 {
+    0%{
+        transform: scale(1.1);
+    }50%{
+        transform: scale(1);
+    }100%{
+        transform: scale(.9);
+    }
+}
+
+.container {
+    position: fixed;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+    animation: latidos2 .4s linear infinite alternate;
+}

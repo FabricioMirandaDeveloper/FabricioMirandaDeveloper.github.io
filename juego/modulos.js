@@ -377,7 +377,7 @@ calcularAnios(new Date(2050,3,04)) */
 
 /* 18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5. */
 
-const contador = (texto = "") => {
+/* const contador = (texto = "") => {
 
     if(!texto) return console.warn("No ingresaste una cadena de texto.")
 
@@ -406,9 +406,710 @@ contador()
 contador(2)
 contador("Hola mundo")
 contador("Ñoño")
-contador("lorem")
+contador("lorem") */
 
 
 /* 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero. */
 
+/* const validarNombre = (nombre = "") => {
+    if(!nombre) return console.warn("No ingresaste un nombre")
+    if(typeof nombre !== "string") return console.error(`El valor ${nombre} ingresado. NO es una cadena de texto`)
+
+    let expREG = /^[A-Za-zÁáÉéÍíÓóÚú\s]+$/g.test(nombre)
+    return(expREG)
+        ? console.info(`${nombre} es un nombre válido`)
+        : console.warn(`${nombre}, NO es un nombre válido`)
+}
+
+validarNombre()
+validarNombre(15)
+validarNombre("Fabricio")
+validarNombre("Fabricio Miranda")
+validarNombre("Fabricio Miranda3") */
+
 /* 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero. */
+
+/* const validarEmail = (correo = "") => {
+    if(!correo) return console.warn("No ingresaste un correo")
+    if(typeof correo !== "string") return console.error(`El valor ${correo} ingresado. NO es una cadena de texto`)
+
+    let expREG = /[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i.test(correo)
+    return(expREG)
+        ? console.info(`${correo} es un correo válido`)
+        : console.warn(`${correo}, NO es un correo válido`)
+}
+
+validarEmail()
+validarEmail(15)
+validarEmail("Fabricio")
+validarEmail("Fabricio Miranda")
+validarEmail("Fabricio Miranda3")
+validarEmail("1870904461@undc.edu.pe")
+validarEmail("mirandaquezadafabriciojoel@gmail.com") */
+
+
+/* 21) Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25]. */
+
+/* const devolverCuadrados = (arr = undefined) => {
+
+    if(arr === undefined) return console.warn("No ingresaste un arreglo de números")
+
+    if(!(arr instanceof Array)) return console.error("El valor que ingresaste no es un arreglo")
+
+    if(arr.length === 0) return console.error("El arreglo esta vacío")
+    
+    for (let num of arr) {
+        if(typeof num !== "number") return console.error(`El valor ${num} ingresado. NO es un número`)
+    }
+
+    const newArr = arr.map(el => el * el)
+    return console.info(`Arreglo Original ${arr}.\nArreglo Elevado al Cuadrado ${newArr}`)
+}
+
+devolverCuadrados()
+devolverCuadrados(2)
+devolverCuadrados([])
+devolverCuadrados([10,"g"]) */
+
+/* 22) Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60]. */
+
+/* const arrayMinMax = (arr = undefined) => {
+
+    if(arr === undefined) return console.warn("No ingresaste un arreglo de números")
+
+    if(!(arr instanceof Array)) return console.error("El valor que ingresaste no es un arreglo")
+
+    if(arr.length === 0) return console.error("El arreglo esta vacío")
+    
+    for (let num of arr) {
+        if(typeof num !== "number") return console.error(`El valor ${num} ingresado. NO es un número`)
+    }
+
+    return console.info(`Array ingresado: ${arr}\nArray Mayor: ${Math.max(...arr)}\nArray Menor:${Math.min(...arr)} `)
+}
+
+arrayMinMax()
+arrayMinMax(10)
+arrayMinMax([])
+arrayMinMax([10,"s"])
+arrayMinMax([10,20,30,40,50,60]) */
+
+/* 23) Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}. */
+
+/* const devolverObjeto = (arr = undefined) => {
+
+    if(arr === undefined) return console.warn("No ingresaste un arreglo de números")
+
+    if(!(arr instanceof Array)) return console.error("El valor que ingresaste no es un arreglo")
+
+    if(arr.length === 0) return console.error("El arreglo esta vacío")
+    
+    for (let num of arr) {
+        if(typeof num !== "number") return console.error(`El valor ${num} ingresado. NO es un número`)
+    }
+
+    return console.info({
+        pares: arr.filter(num => num % 2 === 0),
+        impares: arr.filter(num => num % 2 === 1)
+    })
+
+}
+devolverObjeto()
+devolverObjeto(1)
+devolverObjeto([])
+devolverObjeto(["a"])
+devolverObjeto([1,2,3,4,5,6,7,8,9,0])
+ */
+
+/* 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }. */
+
+/* const ordenarArray = (arr = undefined) => {
+
+    if(arr === undefined) return console.warn("No ingresaste un arreglo de números")
+
+    if(!(arr instanceof Array)) return console.error("El valor que ingresaste no es un arreglo")
+
+    if(arr.length === 0) return console.error("El arreglo esta vacío")
+    
+    for (let num of arr) {
+        if(typeof num !== "number") return console.error(`El valor ${num} ingresado. NO es un número`)
+    }
+
+    console.info({
+        arr,
+        asc: arr.map(el => el).sort(),
+        desc: arr.map(el => el).sort().reverse()
+
+    })
+}
+
+ordenarArray()
+ordenarArray(true)
+ordenarArray([])
+ordenarArray([2,{}])
+ordenarArray([2,4,8,7,3]) */
+
+/* 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true]. */
+
+/* const quitarDuplicados = (arr = undefined) => {
+
+    if(arr === undefined) return console.warn("No ingresaste un arreglo de números")
+
+    if(!(arr instanceof Array)) return console.error("El valor que ingresaste no es un arreglo")
+
+    if(arr.length === 0) return console.error("El arreglo esta vacío")
+
+    if(arr.length === 1) return console.error("El arreglo debe tener al menos 2 elementos")
+
+     return console.info({
+        original: arr,
+        sinDuplicar: arr.filter((value,index,self) => self.indexOf(value) === index)
+    }) 
+    return console.info({
+        original: arr,
+        sinDuplicar: [...new Set(arr)]
+    })
+} 
+
+quitarDuplicados()
+quitarDuplicados("s")
+quitarDuplicados([])
+quitarDuplicados([1,2,2,3,4,5,6,6]) */
+
+/* 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5. */
+
+/* const arrPromedio = (arr = undefined) => {
+
+    if(arr === undefined) return console.warn("No ingresaste un arreglo de números")
+
+    if(!(arr instanceof Array)) return console.error("El valor que ingresaste no es un arreglo")
+
+    if(arr.length === 0) return console.error("El arreglo esta vacío")
+    
+    for (let num of arr) {
+        if(typeof num !== "number") return console.error(`El valor ${num} ingresado. NO es un número`)
+    }
+
+    return console.info(
+        arr.reduce((total,num,index,arr) => {
+            total += num
+            if(index === arr.length-1) {
+                return `El promedio de ${arr.join(" + ")} es ${total / arr.length}`
+            }else {
+                return total
+            }
+        })
+    )
+}
+arrPromedio()
+arrPromedio(true)
+arrPromedio([])
+arrPromedio([1,"t"])
+arrPromedio([9,8,7,6,5,4,3,2,1,0]) */
+
+/* 27) Programa una clase llamada Pelicula.
+
+La clase recibirá un objeto al momento de instanciarse con los siguentes datos: id de la película en IMDB, titulo, director, año de estreno, país o países de origen, géneros y calificación en IMBD.
+  - Todos los datos del objeto son obligatorios.
+  - Valida que el id IMDB tenga 9 caracteres, los primeros 2 sean letras y los 
+     7 restantes números.
+  - Valida que el título no rebase los 100 caracteres.
+  - Valida que el director no rebase los 50 caracteres.
+  - Valida que el año de estreno sea un número entero de 4 dígitos.
+  - Valida que el país o paises sea introducidos en forma de arreglo.
+  - Valida que los géneros sean introducidos en forma de arreglo.
+  - Valida que los géneros introducidos esten dentro de los géneros 
+     aceptados*.
+  - Crea un método estático que devuelva los géneros aceptados*.
+  - Valida que la calificación sea un número entre 0 y 10 pudiendo ser 
+    decimal de una posición.
+  - Crea un método que devuelva toda la ficha técnica de la película.
+  - Apartir de un arreglo con la información de 3 películas genera 3 
+    instancias de la clase de forma automatizada e imprime la ficha técnica 
+    de cada película.
+
+* Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western. */
+
+/* class Pelicula {
+    constructor(id, titulo, director, estreno, pais, generos, calificacion) {
+        this.id = id,
+        this.titulo  = titulo,
+        this.director = director,
+        this.estreno = estreno,
+        this.pais = pais,
+        this.estreno = estreno,
+        this.generos = generos,
+        this.calificacion = calificacion
+
+        this.validadIMDB(id)
+        this.validadTitulo(titulo)
+        this.validadDirector(director)
+        this.validadEstreno(estreno)
+        this.validadPais(pais)
+        this.validadGeneros(generos)
+        this.validadCalificacion(calificacion)
+    }
+
+    static get listaGeneros () {
+        return ["Action", "Adult", "Adventure", "Animation", "Biography", "Comedy", "Crime", "Documentary" ,"Drama", "Family", "Fantasy", "Film Noir", "Game-Show", "History", "Horror", "Musical", "Music", "Mystery", "News", "Reality-TV", "Romance", "Sci-Fi", "Short", "Sport", "Talk-Show", "Thriller", "War, Western"] 
+    }
+
+    static generosAcetados() {
+        return console.info(`Los géneros aceptados son: ${Pelicula.listaGeneros.join(", ")}`)
+    }
+
+    validarCadena(propiedad,valor) {
+
+        if(!valor) return console.warn(`${propiedad} "${valor}" esta vacío`)
+
+        if(typeof valor !== "string") return console.error(`${propiedad} "${valor}" ingresado. NO es una cadena de texto`)
+
+        return true
+    }
+
+    validarNumero(propiedad,valor) {
+        if(!valor) return console.warn(`${propiedad} "${valor}" esta vacío`)
+
+        if(typeof valor !== "number") return console.error(`${propiedad} "${valor}" ingresado. NO es número`)
+
+        return true
+    }
+
+    validadArreglo(propiedad,valor) {
+        if(!valor) return console.warn(`${propiedad} "${valor}" esta vacío`)
+
+        if(!(valor instanceof Array)) return console.error(`${propiedad} "${valor}" ingresado. NO es un arreglo`)
+
+        if(valor.length === 0) return console.error("El arreglo esta vacío")
+    
+        for (let cadena of valor) {
+            if(typeof cadena !== "string") return console.error(`El valor ${cadena} ingresado. NO es una cadena de texto`)
+        }
+        return true 
+    }
+    validadLongitudCadena(propiedad,valor,longitud) {
+        if (valor.length > longitud) return console.error(`${propiedad} "${valor}" excede el número de caracteres permitidos (${longitud})`)
+        return true
+    }
+
+    validadIMDB(id) {
+        if(this.validarCadena("ID", id)) 
+
+            if(!(/^([a-z]){2}([0-9]){7}$/.test(id))) 
+            return console.error(`ID ${id} no es válido, debe tener 9 caracteres, los 2 primeros letras minúsculas, los 7 restantes números.`)
+    }
+
+    validadTitulo(titulo) {
+        if(this.validarCadena("Titulo", titulo)) 
+            this.validadLongitudCadena("Titulo", titulo, 100)
+    }
+
+    validadDirector(director) {
+        if(this.validarCadena("Director", director)) 
+            this.validadLongitudCadena("Director", director, 50)
+    }
+
+    validadEstreno(estreno) {
+        if(this.validarNumero("Año de Estreno", this.estreno)) 
+
+        if(!(/^([0-9]{4})$/.test(this.estreno))) 
+        return console.error(`Año de Estreño ${estreno} no es válido, debe ser un número de 4 dígitos`)
+    }
+
+    validadPais(pais) {
+        this.validadArreglo("Pais", pais)
+    }
+
+    validadGeneros(generos) {
+        if(this.validadArreglo("Géneros", generos)) {
+            for (let gener of generos) {
+                /* console.log(gener, Pelicula.listaGeneros.includes(gener)) */
+
+       /*          if(!Pelicula.listaGeneros.includes(gener)) {
+                    console.error(`Género(s) incorrectos "${generos.join(",")}"`)
+                    Pelicula.generosAcetados()
+                }
+            }
+        }
+    }
+
+    validadCalificacion(calificacion) {
+        if(this.validarNumero("Calificación", calificacion)) 
+        return (calificacion < 0 || calificacion > 10) 
+        ? console.error("La calificación tiene que estar en un rango entre 0 y 10")
+        : this.calificacion = calificacion.toFixed(1)
+    }
+
+    fichaTecnica() {
+        console.info(`Ficha Técnica:\nTítulo: "${this.titulo}"\nDirector: "${this.director}"\nAño: "${this.estreno}"\nPais: "${this.pais}"\nGéneros: "${this.generos}"\nCalificación: "${this.calificacion}"\nId: "${this.id}"`)
+    }
+} */
+/* const peli = new Pelicula(
+    "ii7865441",
+    "El Hoyo",
+    "Fabricio Miranda",
+    2023,
+    ["Perú","Argentina"],
+    ["Comedy","Sport"],
+    9.12
+)
+
+peli.fichaTecnica()  */
+/* const misPelis = [
+    {
+    id: "ii7865441",
+    titulo: "El Hoyo",
+    director:"Fabricio Miranda",
+    estreno: 2023,
+    pais: ["Perú","Argentina"],
+    generos: ["Comedy","Sport"],
+    calificacion: 9.12
+    },
+    {
+    id: "ii7865441",
+    titulo: "El Hoyo",
+    director:"Fabricio Miranda",
+    estreno: 2023,
+    pais: ["Perú","Argentina"],
+    generos: ["Comedy","Sport"],
+    calificacion: 9.12
+    },
+    {
+    id: "ii7865441",
+    titulo: "El Hoyo",
+    director:"Fabricio Miranda",
+    estreno: 2023,
+    pais: ["Perú","Argentina"],
+    generos: ["Comedy","Sport"],
+    calificacion: 9.12
+    }
+]
+
+misPelis.forEach(el => new Pelicula(el).fichaTecnica) */
+
+/* console.log("Inicio");
+
+ASINCRONIA
+
+setTimeout(() => {
+    console.log("Ejecutando un setTimeout, esto se ejecuta una sola vez")
+}, 3000)
+
+setInterval(() => {
+    console.log("Ejecutando un setTinterval, esto se ejecuta indefinidamente cada cierto intervalo de tiempo")
+}, 1000) */
+
+
+/* let temporizador = setTimeout(() => {
+    console.log(new Date().toLocaleTimeString())
+}, 1000); */
+
+
+/* function cuadradoCallback(value,callback) {
+    setTimeout(() => {
+        callback(value, value * value)
+    }, 0 | Math.random() * 1000);
+} 
+
+cuadradoCallback(0, (value, resultado) => {
+    console.log("Inical Callback")
+    console.log(`Callback: ${value} ${resultado}`)
+    cuadradoCallback(1, (value, resultado) => {
+        console.log(`Callback: ${value} ${resultado}`)
+        cuadradoCallback(2, (value, resultado) => {
+            console.log(`Callback: ${value} ${resultado}`)
+            cuadradoCallback(3, (value, resultado) => {
+                console.log(`Callback: ${value} ${resultado}`)
+                cuadradoCallback(4, (value, resultado) => {
+                    console.log(`Callback: ${value} ${resultado}`)
+                    cuadradoCallback(5, (value, resultado) => {
+                        console.log(`Callback: ${value} ${resultado}`)
+                    })
+                })
+            })
+        })
+    })
+    
+}) */
+
+/* PROMESA  */
+/* PROMESA  */
+/* PROMESA  */
+/* PROMESA  */
+
+/* function cuadradoPromise(value) {
+    if(typeof value !== "number") 
+        return Promise.reject(`Error, el valor "${value}" ingresado no es un número`)
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve({
+                value,
+                resultado: value * value
+            })
+        }, 0 | Math.random() * 1000);
+    })
+} 
+cuadradoPromise(0)
+    .then(obj => {
+        console.log(obj)
+        console.log("Inicio Promise")
+        console.log(`Promise: ${obj.value}, ${obj.resultado}`)
+        return cuadradoPromise(1)
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.resultado}`)
+        return cuadradoPromise(2)
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.resultado}`)
+        return cuadradoPromise(3)
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.resultado}`)
+        return cuadradoPromise(4)
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.resultado}`)
+        return cuadradoPromise(5)
+    })
+    .then(obj => {
+        console.log(`Promise: ${obj.value}, ${obj.resultado}`)
+        console.log("Fin del Promise")
+    })
+    .catch(err => console.error(err)) */
+
+
+  /*   ASYNC AWAIT
+    ASYNC AWAIT
+    ASYNC AWAIT
+    ASYNC AWAIT
+    ASYNC AWAIT 
+    */
+   
+/* function cuadradoPromise(value) {
+    if(typeof value !== "number") 
+    return Promise.reject(`Error, el valor "${value}" ingresado no es un número`)
+    return new Promise((resolve,reject) => {
+        setTimeout(() => {
+            resolve({
+                value,
+                resultado: value * value
+            })
+        }, 0 | Math.random() * 1000);
+    })
+    
+} 
+async function funcionAsincronaDeclarada() {
+    try{
+        console.log("Incio Async Function")
+        let obj = await cuadradoPromise(0)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+        
+        obj = await cuadradoPromise(1)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+
+        obj = await cuadradoPromise(2)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+        
+        obj = await cuadradoPromise(3)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+
+        obj = await cuadradoPromise(4)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+
+        obj = await cuadradoPromise(5)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+
+        obj = await cuadradoPromise("6")
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+    }catch(err ){
+        console.error(err)
+    }
+}
+
+funcionAsincronaDeclarada()
+
+
+const funcionAsincronaExpresada = async () => {
+    
+    try{
+        console.log("Incio Async Function")
+        let obj = await cuadradoPromise(0)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+        
+        obj = await cuadradoPromise(1)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+
+        obj = await cuadradoPromise(2)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+        
+        obj = await cuadradoPromise(3)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+
+        obj = await cuadradoPromise(4)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+
+        obj = await cuadradoPromise(5)
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+
+        obj = await cuadradoPromise("6")
+        console.log(`Async Function ${obj.value}, ${obj.resultado}`)
+    }catch(err ){
+        console.error(err)
+    }
+}
+
+funcionAsincronaExpresada() */
+
+/* const a = Symbol("a")
+const b = Symbol("b")
+
+console.log(typeof a, typeof b); */
+/* const NOMBRE = Symbol("Nombre")
+const SALUDAR = Symbol("Saludar")
+
+const persona = {
+    [NOMBRE]: "Fabricio"
+}
+
+console.log(persona[NOMBRE]);
+
+persona[SALUDAR] = function() {
+    console.log("Hola")
+}
+
+console.log(persona)
+persona[SALUDAR]();
+
+persona.edad = 10
+console.log(persona)
+console.log(Object.getOwnPropertySymbols(persona)) */
+
+/* SETS
+SETS
+SETS
+SETS */
+
+/* const unset = new Set([1,2,3,3,4,5,true,false,true,{},{},11])
+
+console.log(unset) 
+
+unset.add(12)
+console.log(unset) 
+console.log(unset.size)
+
+for (const i of unset) {
+    console.log(i)
+}
+
+unset.forEach(item => console.log(item))
+
+let aya = Array.from(unset)
+console.log(aya[0])
+
+unset.delete(3)
+console.log(unset);
+console.log(unset.has(6));
+console.log(unset.has(5));
+
+unset.clear()
+console.log(unset) */
+
+/* 
+MAP MAP MAP MAP MAP MAP
+MAP MAP MAP MAP MAP MAP
+MAP MAP MAP MAP MAP MAP
+MAP MAP MAP MAP MAP MAP */
+
+/* let mapa = new Map()
+mapa.set("nombre","Fabricio")
+mapa.set("apellido","Miranda")
+mapa.set("edad",21)
+
+console.log(mapa)
+console.log(mapa.size)
+console.log(mapa.has("nombre"))
+console.log(mapa.has("carrera"))
+console.log(mapa.get("nombre"))
+
+
+mapa.set("nombre","Fabri")
+console.log(mapa)
+
+for (const [key,value] of mapa) {
+    console.log(`Llave ${key}, Valor ${value}`);
+}
+
+
+let mapa2 = new Map([
+    ["nombre","Arturo"],
+    ["edad",3]
+])
+console.log(mapa2); */
+
+
+/* const ws = new WeakSet()
+
+let valor1 = {"valor1": 1},
+valor2 = {"valor2": 2},
+valor3 = {"valor3": 3}
+
+ws.add(valor1)
+ws.add(valor2)
+
+console.log(ws)
+
+ws.add(valor3)
+
+console.log(ws);
+
+ws.delete(valor2)
+
+console.log(ws);
+
+ws.add(valor2)
+
+setInterval(() => {
+    console.log(ws)
+}, 1000);
+
+setTimeout(() => {
+    valor1 = null,
+    valor2 = null,
+    valor3 = null
+}, 5000); */
+
+/* const wm = new WeakMap()
+
+let llave1 = {}
+let llave2 = {}
+let llave3 = {}
+
+wm.set(llave1, 1)
+wm.set(llave2, "Fabricio")
+console.log(wm);
+
+console.log(wm.has(llave1));
+console.log(wm.has(llave3)); */
+
+/* const iterable = new Set([1,2,3,4,5])
+const iterable = new Map([["nombre","Fabricio"],["edad",21]])
+
+const iterador = iterable[Symbol.iterator]()
+
+console.log(iterable)
+console.log(iterador)
+console.log(iterador.next())
+console.log(iterador.next())
+console.log(iterador.next())
+console.log(iterador.next())
+console.log(iterador.next())
+console.log(iterador.next())
+
+let next = iterador.next()
+
+while (!next.done) {
+    console.log(next.value)
+    next = iterador.next()
+} */
+

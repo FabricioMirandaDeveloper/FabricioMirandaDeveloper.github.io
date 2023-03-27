@@ -2,39 +2,59 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practica</title>
-    <link rel="stylesheet" href="./css/normalize.css">
-    <script src="https://kit.fontawesome.com/0ef9856991.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../css/style.css">
-    <link rel="stylesheet" href="practica.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio</title>
+  <script src="https://kit.fontawesome.com/0ef9856991.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
-    <nav class="nav">
-        <div class="nav__container">
-          <a href="../index.html"><img src="../assets/logo.png" alt="logo" class="nav__logo"></a>
-          <label for="icon-bars" class="nav__label">
-            <i class="fa-solid fa-bars nav__icon"></i>
-          </label>
-          <input type="checkbox" id="icon-bars" class="nav__input">
-          <div class="nav__menu">
-              <a href="#" class="nav__item">Inicio</a>
-              <a href="#" class="nav__item">Nosotros</a>
-              <a href="#" class="nav__item">Servicios</a>
-              <a href="/practica/practica.html" class="nav__item">Portafolio</a>
-              <a href="#" class="nav__item">Contactos</a>
-          </div>
-        </div>
-      </nav>
-    <div>
-        <a href="./relojDigital/reloj.html">Reloj Digital</a>
+<body class="bg-[#443C68]">
+  <nav class="bg-[#18122B] h-20 text-white relative sm:static">
+    <div class="flex justify-between items-center h-full w-11/12 mx-auto">
+      <a href="../index.html">
+        <img src="../assets/logo.png" alt="logo" class="h-10">
+      </a>
+      <label for="prueba" class="nav__label">
+        <i class="fa-solid fa-bars text-3xl sm:hidden"></i>
+      </label>
+      <input type="checkbox" id="prueba" class="hidden">
+      <div
+        class="absolute invisible bg-[#393053] top-0 left-0 w-full h-screen -z-10 flex flex-col items-center justify-evenly pt-20 sm:flex sm:flex-row sm:visible sm:gap-x-4 sm:static sm:z-0 sm:p-0 sm:justify-end sm:h-auto sm:w-auto sm:bg-transparent md:gap-x-8 lg:gap-x-12 xl:gap-x-16"
+        id="prueba2">
+        <a href="#" class="">Inicio</a>
+        <a href="#" class="">Nosotros</a>
+        <a href="#" class="">Servicios</a>
+        <a href="/practica/practica.html" class="">Portafolio</a>
+        <a href="#" class="">Contacto</a>
+      </div>
+    </div>
+  </nav>
+  <!-- Cards para mostrar portalofio -->
+  <div class="">
+    <div class="left-column bg-leftcol">
+      <h6>Control de Versiones</h6>
+      <h2>HTML</h2>
+      <i class="fa-brands fa-html5"></i>
     </div>
     <div>
-        <a href="/practica/FormularioProfesional/formulario.html">Formulario</a>
+      <div>
+        <h4>
+          Dificultada Baja
+        </h4> 
+      </div>
+      <h2>Aprende github en 3 semanas</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas illo quasi beatae impedit quod? Ducimus impedit ipsam nobis numquam cum natus, maxime sed? Quaerat, repudiandae voluptatibus? Sunt laudantium cum quisquam.</p>
+      <button>Observar</button>
     </div>
+  </div>
+  <div>
+    <a href="./relojDigital/reloj.html">Reloj Digital</a>
+  </div>
+  <div>
+    <a href="/practica/FormularioProfesional/formulario.html">Formulario</a>
+  </div>
 </body>
 
 </html>
